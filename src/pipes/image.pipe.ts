@@ -20,7 +20,7 @@ export class ImagePipe
       const originalName = parse(image.originalname).name;
       const filename = Date.now() + '-' + originalName + `.${imageType}`;
 
-      // where the magic happens
+      // Where the magic happens
       await sharp(image.buffer)
         .resize({
           width: 200,

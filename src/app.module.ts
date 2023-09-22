@@ -4,10 +4,9 @@ import { AppService } from './app.service';
 
 // Multer
 import { MulterModule } from '@nestjs/platform-express';
-import { memoryStorage } from 'multer';
 
 @Module({
-  imports: [MulterModule.register({ storage: memoryStorage() })],
+  imports: [MulterModule.register()],
   controllers: [AppController],
   providers: [AppService],
 })
